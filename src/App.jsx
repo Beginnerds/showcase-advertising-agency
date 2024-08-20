@@ -4,7 +4,7 @@ function App() {
 
 
   return (
-    <section className="bg-bg min-h-screen w-screen p-2 lg:p-4">
+    <section className="bg-bg min-h-screen w-screen p-2 lg:p-4 font-primary">
       <Navbar/>
     </section>
   )

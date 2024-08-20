@@ -6,6 +6,15 @@ export default {
   ],
   theme: {
     extend: {},
+    colors:{
+      'bg':"#e7e7e7",
+      'primary':"#ffffff",
+      'accent':"#202020"
+    },
+    fontFamily:{
+      primary:['Nunito', 'sans-serif'],
+      secondary:['Kalam', 'cursive']
+    }
   },
   plugins: [],
 }

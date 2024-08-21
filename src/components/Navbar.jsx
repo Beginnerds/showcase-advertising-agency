@@ -3,7 +3,7 @@ import React from "react";
 export default function Navbar() {
   return (
     <nav className="w-full rounded-lg bg-primary text-accent p-4 flex justify-between lg:justify-start items-center">
-      <ul className="hidden lg:flex justify-start gap-3 text-sm font-semibold lg:basis-[30%]">
+      <ul className="hidden lg:flex justify-start gap-3 text-sm font-bold lg:basis-[30%]">
         <li>
           <a className="transition-all hover:text-accent/70" href="#">
             Mission
@@ -25,7 +25,7 @@ export default function Navbar() {
           </a>
         </li>
       </ul>
-      <h2 className="text-center lg:basis-[40%] font-bold text-xl">HH</h2>
+      <h2 className="text-center lg:basis-[40%] font-bold text-xl">SV</h2>
       <div className="lg:basis-[30%] flex justify-end items-center gap-2 font-bold z-50">
         <div className="relative rounded-2xl hover:border-b-0 hover:rounded-bl-none hover:rounded-br-none text-center w-28  py-3 border border-accent text-sm group">
           <a href="#" className="">

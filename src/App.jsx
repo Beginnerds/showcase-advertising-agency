@@ -2,6 +2,9 @@ import Navbar from "./components/Navbar";
 
 import HeroImg from "./assets/hero.webp";
 import LandMarkImg from "./assets/landmark.webp";
+import AD1 from "./assets/dummy_ad_1.webp";
+import AD2 from "./assets/dummy_ad_2.webp";
+import AD3 from "./assets/dummy_ad_3.webp";
 
 import BUS_ICON from "./assets/bus_icon.svg";
 import PLANE_ICON from "./assets/plane_icon.svg";
@@ -60,14 +63,14 @@ function App() {
         <div className="__OVERLAY__ absolute top-0 left-0 h-full w-full pointer-events-none bg-black/30 rounded-3xl"></div>
         <div className="__ITEMS_CONTAINER__ absolute top-0 left-0 h-full w-full rounded-3xl flex flex-col justify-between items-center lg:flex-row lg:items-end py-12 px-8 lg:px-24">
           <div className="__HEADING_CONTAINER__ text-primary">
-            <h1 className="font-secondary text-7xl sm:text-9xl">Seattle</h1>
+            <h1 className="font-secondary text-7xl sm:text-9xl">SeattleVista</h1>
             <p className="text-3xl">Outdoor Ads</p>
           </div>
           <div className="__ACTION_BTN_CONTAINER__ w-full max-w-72 sm:max-w-sm lg:max-w-sm xl:max-w-xl text-primary rounded-2xl backdrop-blur-sm bg-black/40 px-8 py-8">
             <h2 className="text-3xl">Sales Office</h2>
-            <p className="mt-6 text-primary/80">11, North Miwaukee Avenue</p>
-            <p className="text-primary/80">Suite 1500</p>
-            <p className="text-primary/80">Chicao, IL 60652</p>
+            <p className="mt-6 text-primary/80">1234 Pine Street</p>
+            <p className="text-primary/80">Suite 57</p>
+            <p className="text-primary/80">Seattle, WA 98101</p>
             <p className="text-primary/80">777-234-1234</p>
             <a
               href="#"
@@ -94,10 +97,10 @@ function App() {
               <div
                 onClick={() => setOpenProductIndex(ind)}
                 key={ind}
-                className="bg-bg/40 p-6 rounded-2xl cursor-pointer"
+                className={`bg-bg/40 p-6 rounded-2xl cursor-pointer transition-all ${openProductIndex != ind ? 'hover:bg-accent group' : ''}`}
               >
                 <div className="__TITLE_ICON_CONT__ flex justify-between items-center">
-                  <h3 className="text-xl font-semibold">{item.title}</h3>
+                  <h3 className="text-xl font-semibold group-hover:text-primary">{item.title}</h3>
                   <div className="bg-primary rounded-lg size-10 p-2">
                     <img src={item.icon} alt="" />
                   </div>
@@ -175,22 +178,178 @@ function App() {
       </section>
       <section className="__STATS_CONT__ mt-2 grid grid-cols-2 sm:grid-cols-4 gap-1">
         <div className="bg-primary rounded-3xl p-4">
-          <p className="text-accent/70 text-center font-medium text-sm">Reach per week</p>
+          <p className="text-accent/70 text-center font-medium text-sm">
+            Reach per week
+          </p>
           <h2 className="mt-12 xl:mt-16 font-bold text-4xl text-center">93%</h2>
         </div>
         <div className="bg-primary rounded-3xl p-4">
-          <p className="text-accent/70 text-center font-medium text-sm">Tourist center displays</p>
-          <h2 className="mt-12 xl:mt-16 font-bold text-4xl text-center">285+</h2>
+          <p className="text-accent/70 text-center font-medium text-sm">
+            Tourist center displays
+          </p>
+          <h2 className="mt-12 xl:mt-16 font-bold text-4xl text-center">
+            285+
+          </h2>
         </div>
         <div className="bg-primary rounded-3xl p-4">
-          <p className="text-accent/70 text-center font-medium text-sm">Monthly Interactions</p>
-          <h2 className="mt-12 xl:mt-16 font-bold text-4xl text-center">25k+</h2>
+          <p className="text-accent/70 text-center font-medium text-sm">
+            Monthly Interactions
+          </p>
+          <h2 className="mt-12 xl:mt-16 font-bold text-4xl text-center">
+            25k+
+          </h2>
         </div>
         <div className="bg-primary rounded-3xl p-4">
-          <p className="text-accent/70 text-center font-medium text-sm">Weekly ROI</p>
+          <p className="text-accent/70 text-center font-medium text-sm">
+            Weekly ROI
+          </p>
           <h2 className="mt-12 xl:mt-16 font-bold text-4xl text-center">51%</h2>
         </div>
       </section>
+      <section className="__ADS_SHOWCASE_CONT__ mt-2 grid grid-cols-1  sm:grid-cols-3 gap-2">
+        <div className="h-[460px] w-full rounded-3xl">
+          <img
+            src={AD1}
+            alt="ad1"
+            className="w-full h-full object-cover rounded-3xl"
+          />
+        </div>
+        <div className="hidden sm:block h-[460px] w-full rounded-3xl">
+          <img
+            src={AD2}
+            alt="ad2"
+            className="w-full h-full object-cover rounded-3xl"
+          />
+        </div>
+        <div className="h-[460px] w-full rounded-3xl">
+          <img
+            src={AD3}
+            alt="ad3"
+            className="w-full h-full object-cover rounded-3xl"
+          />
+        </div>
+      </section>
+      <footer className="mt-2 bg-primary/80 grid grid-cols-2 md:grid-cols-4 gap-y-4 rounded-3xl py-12 px-6">
+        <div className="__MEDIA_CONT__">
+          <h3 className="font-bold text-xl lg:text-3xl">Media</h3>
+          <a
+            className="mt-6 block font-semibold leading-7 text-accent/80 hover:text-accent transition-all"
+            href="#"
+          >
+            Posters
+          </a>
+          <a
+            className="block font-semibold leading-7 text-accent/80 hover:text-accent transition-all"
+            href="#"
+          >
+            Transit Shelters
+          </a>
+          <a
+            className="block font-semibold leading-7 text-accent/80 hover:text-accent transition-all"
+            href="#"
+          >
+            Tourist Centers
+          </a>
+          <a
+            className="block font-semibold leading-7 text-accent/80 hover:text-accent transition-all"
+            href="#"
+          >
+            Exterior Rails
+          </a>
+          <a
+            className="block font-semibold leading-7 text-accent/80 hover:text-accent transition-all"
+            href="#"
+          >
+            Digital Displays
+          </a>
+        </div>
+        <div className="__ABOUT_CONT__">
+          <h3 className="font-bold text-xl lg:text-3xl">About</h3>
+          <a
+            className="mt-6 block font-semibold leading-7 text-accent/80 hover:text-accent transition-all"
+            href="#"
+          >
+            Management
+          </a>
+          <a
+            className="block font-semibold leading-7 text-accent/80 hover:text-accent transition-all"
+            href="#"
+          >
+            Careers
+          </a>
+          <a
+            className="block font-semibold leading-7 text-accent/80 hover:text-accent transition-all"
+            href="#"
+          >
+            Locations
+          </a>
+          <a
+            className="block font-semibold leading-7 text-accent/80 hover:text-accent transition-all"
+            href="#"
+          >
+            Associates
+          </a>
+        </div>
+        <div className="__RESOURCES_CONT__">
+          <h3 className="font-bold text-xl lg:text-3xl">Resources</h3>
+          <a
+            className="mt-6 block font-semibold leading-7 text-accent/80 hover:text-accent transition-all"
+            href="#"
+          >
+            Blog
+          </a>
+          <a
+            className="block font-semibold leading-7 text-accent/80 hover:text-accent transition-all"
+            href="#"
+          >
+            Starter Kits
+          </a>
+          <a
+            className="block font-semibold leading-7 text-accent/80 hover:text-accent transition-all"
+            href="#"
+          >
+            Analytics
+          </a>
+          <a
+            className="block font-semibold leading-7 text-accent/80 hover:text-accent transition-all"
+            href="#"
+          >
+            Workforce
+          </a>
+        </div>
+        <div className="__CONNECT_CONT__ max-w-[400px]">
+          <h3 className="font-bold text-xl lg:text-3xl">Connect with us</h3>
+          <a
+            className="mt-8 bg-white rounded-xl px-4 py-4 flex justify-between items-center font-semibold leading-7 text-accent/80 hover:text-primary hover:bg-accent group transition-all"
+            href="#"
+          >
+            <span>Email</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              transform="rotate(90)"
+              className="stroke-accent/80 group-hover:stroke-primary size-6"
+            >
+              <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                {" "}
+                <path
+                  d="M12 5V19M12 5L6 11M12 5L18 11"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>{" "}
+              </g>
+            </svg>
+          </a>
+        </div>
+      </footer>
     </section>
   );
 }

@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 
 import HeroImg from "./assets/hero.webp";
+import LandMarkImg from "./assets/landmark.webp";
 
 import BUS_ICON from "./assets/bus_icon.svg";
 import PLANE_ICON from "./assets/plane_icon.svg";
@@ -59,7 +60,7 @@ function App() {
         <div className="__OVERLAY__ absolute top-0 left-0 h-full w-full pointer-events-none bg-black/30 rounded-3xl"></div>
         <div className="__ITEMS_CONTAINER__ absolute top-0 left-0 h-full w-full rounded-3xl flex flex-col justify-between items-center lg:flex-row lg:items-end py-12 px-8 lg:px-24">
           <div className="__HEADING_CONTAINER__ text-primary">
-            <h1 className="font-secondary text-7xl sm:text-9xl">Chicago</h1>
+            <h1 className="font-secondary text-7xl sm:text-9xl">Seattle</h1>
             <p className="text-3xl">Outdoor Ads</p>
           </div>
           <div className="__ACTION_BTN_CONTAINER__ w-full max-w-72 sm:max-w-sm lg:max-w-sm xl:max-w-xl text-primary rounded-2xl backdrop-blur-sm bg-black/40 px-8 py-8">
@@ -91,7 +92,7 @@ function App() {
           {PRODUCTS_DATA.map((item, ind) => {
             return (
               <div
-              onClick={()=>setOpenProductIndex(ind)}
+                onClick={() => setOpenProductIndex(ind)}
                 key={ind}
                 className="bg-bg/40 p-6 rounded-2xl cursor-pointer"
               >
@@ -126,7 +127,6 @@ function App() {
                               {" "}
                               <path
                                 d="M12 5V19M12 5L6 11M12 5L18 11"
-                                
                                 strokeWidth="2"
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
@@ -142,6 +142,53 @@ function App() {
               </div>
             );
           })}
+        </div>
+      </section>
+      <section className="__LANDMARK_IMG_CONT__ mt-2 rounded-3xl w-full h-[640px]">
+        <img
+          src={LandMarkImg}
+          alt="landmark"
+          className="w-full h-full object-cover rounded-3xl"
+        />
+      </section>
+      <section className="__HIGHLIGHTS_CONT__ bg-primary rounded-3xl mt-2 flex flex-col sm:flex-row sm:justify-between px-8 py-12 max-sm:gap-12">
+        <div className="__HEADING_CONT__ md:w-1/2">
+          <h2 className="font-semibold text-4xl">Seattle Highights</h2>
+          <div className="mt-32">
+            <a
+              href="#"
+              className="rounded-xl px-6 py-4 border border-accent/50 font-semibold text-sm hover:bg-accent hover:text-primary transition-all"
+            >
+              Download Starter Pack
+            </a>
+          </div>
+        </div>
+        <div className="__DESC_CONT__ md:w-1/2">
+          <p className="text-accent/80 font-medium">
+            We specialize in creating dynamic, results-driven ad campaigns.
+            Combining creativity with strategic insight, we deliver impactful
+            solutions that make your brand stand out. Partner with us to
+            transform your vision into powerful stories that captivate and
+            convert. Let's take your brand to new heights!
+          </p>
+        </div>
+      </section>
+      <section className="__STATS_CONT__ mt-2 grid grid-cols-2 sm:grid-cols-4 gap-1">
+        <div className="bg-primary rounded-3xl p-4">
+          <p className="text-accent/70 text-center font-medium text-sm">Reach per week</p>
+          <h2 className="mt-12 xl:mt-16 font-bold text-4xl text-center">93%</h2>
+        </div>
+        <div className="bg-primary rounded-3xl p-4">
+          <p className="text-accent/70 text-center font-medium text-sm">Tourist center displays</p>
+          <h2 className="mt-12 xl:mt-16 font-bold text-4xl text-center">285+</h2>
+        </div>
+        <div className="bg-primary rounded-3xl p-4">
+          <p className="text-accent/70 text-center font-medium text-sm">Monthly Interactions</p>
+          <h2 className="mt-12 xl:mt-16 font-bold text-4xl text-center">25k+</h2>
+        </div>
+        <div className="bg-primary rounded-3xl p-4">
+          <p className="text-accent/70 text-center font-medium text-sm">Weekly ROI</p>
+          <h2 className="mt-12 xl:mt-16 font-bold text-4xl text-center">51%</h2>
         </div>
       </section>
     </section>

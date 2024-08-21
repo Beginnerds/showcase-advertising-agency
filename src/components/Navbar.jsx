@@ -84,7 +84,7 @@ export default function Navbar() {
         </div>
         <a
           href="#"
-          className="rounded-2xl text-center w-28 py-3 bg-accent text-primary text-sm"
+          className="rounded-2xl text-center w-28 py-3 bg-accent text-primary text-sm hover:bg-black transition-all"
         >
           Get in touch
         </a>

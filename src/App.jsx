@@ -63,7 +63,7 @@ function App() {
         <div className="__OVERLAY__ absolute top-0 left-0 h-full w-full pointer-events-none bg-black/30 rounded-3xl"></div>
         <div className="__ITEMS_CONTAINER__ absolute top-0 left-0 h-full w-full rounded-3xl flex flex-col justify-between items-center lg:flex-row lg:items-end py-12 px-8 lg:px-24">
           <div className="__HEADING_CONTAINER__ text-primary">
-            <h1 className="font-secondary text-7xl sm:text-9xl">SeattleVista</h1>
+            <h1 className="font-secondary text-5xl sm:text-9xl">SeattleVista</h1>
             <p className="text-3xl">Outdoor Ads</p>
           </div>
           <div className="__ACTION_BTN_CONTAINER__ w-full max-w-72 sm:max-w-sm lg:max-w-sm xl:max-w-xl text-primary rounded-2xl backdrop-blur-sm bg-black/40 px-8 py-8">
